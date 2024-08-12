@@ -31,3 +31,5 @@ __pycache__/
 venv*/
 allure-results
 .env
+
+config.*.env
