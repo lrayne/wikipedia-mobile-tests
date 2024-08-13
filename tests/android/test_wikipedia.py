@@ -1,9 +1,14 @@
+import allure
+from allure_commons.types import Severity
 from appium.webdriver.common.appiumby import AppiumBy
 from selene import have, be
 from selene import browser as mobile
 from allure import step
 
 
+@allure.severity(Severity.CRITICAL)
+@allure.suite('Погружение')
+@allure.title('Завершение процесса погружения')
 def test_complete_onboarding_proccess():
 
     with step(
@@ -57,6 +62,9 @@ def test_complete_onboarding_proccess():
         )
 
 
+@allure.severity(Severity.CRITICAL)
+@allure.suite('Закладки')
+@allure.title('Добавление нового списка для чтения')
 def test_add_a_new_reading_list():
 
     # GIVEN
@@ -99,6 +107,9 @@ def test_add_a_new_reading_list():
         )
 
 
+@allure.severity(Severity.NORMAL)
+@allure.suite('Погружение')
+@allure.title('Добавление нового языка через экран погружения')
 def test_add_a_new_language_through_onboarding_screen():
 
     # GIVEN
